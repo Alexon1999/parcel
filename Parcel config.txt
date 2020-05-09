@@ -1,0 +1,41 @@
+npm init
+
+npm i -D parcel-bundler sass @babel/core @babel/plugin-transform-runtime @babel/runtime-corejs2
+
+runtime babel plugin
+1) create in root a file named .babelrc
+2) put : {
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 2,
+        "regenerator": true
+      }
+    ]
+  ]
+}
+
+
+3) in package.json
+"dev": "parcel public/index.html"  it will crreate a dist file for us and also a cached
+
+we can also put output if we want :
+"dev": "parcel public/index.html --out-dir development"
+
+precisez le port et effacer le dossier development et cache
+
+
+"dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+
+"build": "parcel build public/index.html --out-dir dist --public-url ./",
+
+"clean": "rimraf ./development && rimraf -rf ./.cache"
+
+
+-------------------------------------------------------
+4) Finally Build
+
+"build": "parcel build public/index.html --out-dir dist --public-url ./"
+
+

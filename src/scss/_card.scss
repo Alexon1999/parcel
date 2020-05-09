@@ -1,0 +1,38 @@
+$secondary-color: rgb(126, 124, 223);
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    border-top: 10px #4d4b4b solid;
+    padding: 30px;
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+    li {
+      line-height: 2;
+      border-bottom: #ccc solid 1px;
+    }
+
+    li:last-child {
+      border: 0;
+    }
+  }
+}
